@@ -7,4 +7,4 @@ A convolutional neural network implemented in Tensorflow to identify an image as
 # Evaluation
 The model was able to predict the image as one of either categories (i.e hot dog or pizza) with a confidence level from 50-70 percent. The confidence level is certainly not good but it does serve as the basis of a convolutional neural network for image classification. There is certainly a lot of room for improvement to enhance its prediction accuracy one of which would be tuning the hyperparameters.
 
-![figure]()
+![figure](Figure_1.png)
