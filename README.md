@@ -3,8 +3,12 @@ Inspired from Jian Yang's SeeFood app in the HBO television series **Silicon Val
 
 ## To-Do
 - [x] Publish Colab notebook to GitHub repo
-- [ ] Create web app to use the model (Tensorflow.js)
+- [x] Create web app for program
 - [ ] Deploy to Heroku for public use
+
+### Future
+- [ ] Create web app to use the model (Tensorflow.js)
+
 
 ## License
 The software is under the MIT license.

@@ -9,6 +9,6 @@ def load_and_prep_image(image):
     return img
 
 def load_and_predict_model(image):
-    model = tf.keras.models.load_model('model')
+    model = tf.keras.models.load_model('models/model_2')
     prediction = model.predict(image)
     return prediction
