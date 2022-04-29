@@ -4,14 +4,14 @@ from utils import *
 def make_prediction(image, class_names):
     img = load_and_prep_image(image=image)
     prediction = load_and_predict_model(img)
-    pred_class = class_names[int(tf.round(prediction)[0][0])]
+    pred_class = class_names[np.argmax(prediction)]
 
     return pred_class
 
-st.title("Hot Dog or Pizza 🌭 🍕")
-st.subheader("Detect if an image is either a hot dog or pizza")
+st.title("Hot Dog or Not Hot Dog 🌭 🚫")
+st.subheader("Detect if an image is either a hot dog or not")
 
-uploaded_file = st.file_uploader("Upload an image of a pizza or hot dog", type=["png", "jpeg", "jpg"])
+uploaded_file = st.file_uploader("Upload an image", type=["png", "jpeg", "jpg"])
 
 if not uploaded_file:
     st.warning("No file has been uploaded.")
@@ -25,6 +25,6 @@ if pred_btn:
     pred_btn = True
 
 if pred_btn:
-    class_names = ["Hot Dog", "Pizza"]
+    class_names = ["Hot Dog", "Not Hot Dog"]
     prediction = make_prediction(uploaded_image, class_names)
     st.markdown(f"The model predicted **{prediction}**")
